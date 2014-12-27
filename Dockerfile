@@ -1,6 +1,8 @@
 FROM ubuntu:14.10
 MAINTAINER Nick Groenen
 
+ENV GITHUB_RELEASE_VERSION v0.5.2
+
 ENV GOVERSION 1.4
 ENV GOPATH /go
 ENV PATH /go/bin:/usr/src/go/bin:$PATH
@@ -23,5 +25,7 @@ COPY bin/build/stage1.sh /build1.sh
 RUN /build1.sh && rm /build1.sh
 COPY bin/build/stage2.sh /build2.sh
 RUN /build2.sh && rm /build2.sh
+COPY bin/build/stage3.sh /build3.sh
+RUN /build3.sh && rm /build3.sh
 
 WORKDIR /go
