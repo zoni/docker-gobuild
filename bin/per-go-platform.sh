@@ -11,10 +11,12 @@ do
 		for goarm in {5..7}
 		do
 			export GOARM=$goarm
+			echo "==> ${GOOS}/${GOARCH}${GOARM}"
 			eval $@
 			unset GOARM
 		done
 	else
+		echo "==> ${GOOS}/${GOARCH}"
 		eval $@
 	fi
 done
