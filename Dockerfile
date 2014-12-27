@@ -17,7 +17,6 @@ ENV GOLANG_PLATFORMS \
     plan9/386 plan9/amd64 \
     solaris/amd64 \
     windows/386 windows/amd64
-ENV GOARM 5
 
 COPY bin/per-go-platform.sh /usr/local/bin/per-go-platform
 
