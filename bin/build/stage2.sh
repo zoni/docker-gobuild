@@ -9,4 +9,4 @@ curl --silent --show-error --location http://golang.org/dl/go${GOVERSION}.src.ta
 	| tar --verbose --directory /usr/src --extract --gunzip
 
 cd /usr/src/go/src
-per-go-platform ./make.bash --no-clean
+per-go-platform GOARM=5 ./make.bash --no-clean
