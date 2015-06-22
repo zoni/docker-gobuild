@@ -1,4 +1,4 @@
-FROM ubuntu:14.10
+FROM zoni/ubuntu
 MAINTAINER Nick Groenen
 
 ENV GITHUB_RELEASE_VERSION v0.5.2
